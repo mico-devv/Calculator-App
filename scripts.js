@@ -152,15 +152,9 @@ function populateHistoryList() {
     calculationHistory.forEach(item => {
         const entry = document.createElement("li");
         entry.textContent = `${item.expression} = ${item.result} (${item.timestamp})`;
-        // Optional: Make history items clickable to load into display
-        entry.addEventListener('click', () => {
-            display.value = item.result;
-            showCalculatorMode(); // Go back to calculator view
-        });
         historyList.appendChild(entry);
     });
 }
-
 
 // ========== VIEW SWITCHING ========== //
 showHistoryBtn.addEventListener("click", showHistoryMode);
