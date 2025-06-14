@@ -1,0 +1,189 @@
+/* styles.css */
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.calculator {
+  background: #242530;
+  padding: 25px;
+  border-radius: 20px;
+  width: 400px;
+  height: 425px;
+}
+
+.display {
+  width: 350px;
+  height: 70px;
+  background: #3A3F77;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: right;
+  padding: 25px;
+  border: none;
+  color: white;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.keypad-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.left-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  flex: 1;
+}
+
+.right-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 130px;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 35px;
+  background-color: #404258;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #4D4F68;
+}
+
+.btn.operator {
+  background-color: #F49D1A;
+}
+
+.btn.operator:hover {
+  background-color: #FFB84C;
+}
+
+.btn.special {
+  background-color: #F41A1A;
+}
+
+.btn.special:hover {
+  background-color: #F53D3D;
+}
+
+.btn.equal {
+  background-color: #B2B2B2;
+  color: #000;
+}
+
+.btn.equal:hover {
+  background-color: #919191;
+  color: #000;
+}
+
+button#backspace {
+  background-color: #404258;
+  color: #fff;
+}
+
+button#backspace:hover {
+  background-color: #4D4F68;
+  color: #fff;
+}
+
+/* History toggle button below display */
+.history-toggle {
+  background-color: #2e3040;
+  width: 80px;
+  height: 45px;
+  border-radius: 35px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* History view */
+#history-view {
+  background-color: #242530;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.history-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.back-btn {
+  background-color: #f87171;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  width: 90px;
+}
+
+/* General Layout Fix */
+.calculator-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Hide one view while showing the other */
+#calculator-view, #history-view {
+  width: 100%;
+}
+
+/* History section styling */
+#history-view {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#history-list {
+  list-style: disc;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}
+/* Add this to your styles.css */
+.hidden {
+    display: none !important; /* Use !important to ensure it overrides other display properties */
+}
+
+#history-view:not(.hidden) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Optional: for spacing history entries */
+}

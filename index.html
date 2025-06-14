@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.0/math.min.js"></script>
+</head>
+<body>
+  <div class="calculator">
+    <!-- Display -->
+    <input type="text" id="display" class="display" readonly>
+
+    <!-- 🔘 History Button -->
+    <button class="btn history-toggle" id="show-history">History</button>
+
+    <!-- 🧮 Calculator View -->
+    <div id="calculator-view">
+      <div class="keypad-container">
+        <!-- Left Grid -->
+        <div class="left-grid">
+          <button class="btn number">1</button>
+          <button class="btn number">2</button>
+          <button class="btn number">3</button>
+          <button class="btn number">4</button>
+          <button class="btn number">5</button>
+          <button class="btn number">6</button>
+          <button class="btn number">7</button>
+          <button class="btn number">8</button>
+          <button class="btn number">9</button>
+          <button class="btn number">.</button>
+          <button class="btn number">0</button>
+          <button class="btn operator" id="backspace">⌫</button>
+        </div>
+
+        <!-- Right Grid -->
+        <div class="right-grid">
+          <button class="btn operator">*</button>
+          <button class="btn operator">/</button>
+          <button class="btn operator">+</button>
+          <button class="btn operator">-</button>
+          <button class="btn operator">%</button>
+          <button class="btn operator">^</button>
+          <button class="btn special">C</button>
+          <button class="btn equal" id="equal">=</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📜 History View (Hidden by Default) -->
+    <div id="history-view" class="hidden">
+      <div class="history-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>History</h2>
+        <button id="back-to-calc" class="btn back-btn">Back</button>
+      </div>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
