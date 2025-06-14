@@ -177,13 +177,13 @@ button#backspace:hover {
   padding-left: 1rem;
   font-size: 1.1rem;
 }
-/* Add this to your styles.css */
+
 .hidden {
-    display: none !important; /* Use !important to ensure it overrides other display properties */
+    display: none !important;
 }
 
 #history-view:not(.hidden) {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Optional: for spacing history entries */
+  gap: 10px;
 }
